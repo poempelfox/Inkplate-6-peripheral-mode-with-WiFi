@@ -1,11 +1,14 @@
 # Soldered Inkplate Arduino library
 
-Note: This is a modified version of Inkplates Arduino library,
-where the only modification is that WiFi support has been added to
-the "Peripheral mode" sketch, so you can control the display via
-WiFi and not only via serial port.
+Note: This is a modified version of Inkplates Arduino library, where the only modification is that WiFi support and a few other things have been added to the "Peripheral mode" sketch (in `examples/Inkplate6/Diagnostics/Inkplate6_Peripheral_Mode`), so that you can control the display via WiFi too and not only via serial port.
 
 This is done in a very messy and quick-hack way, so there is sadly no chance to upstream this without putting in a lot of work.
+
+I'm using this on a display serving as a 'weather station', that is updated remotely once a minute. (TODO: add link to that project here)
+
+For that purpose, a few different fonts have been added, and the peripheral-mode protocol has been extended by functions that I needed - like switching the font, or directly drawing bitmaps without having to put them on an SD-card first.
+
+For generating the .h files that contain these fonts and are compiled in, a modified version of the fontconvert-tool in `extras/fontconvert/` has been used - the modified version can also be found in that directory. The main modification is that a few non-7bit-ASCII characters that I need (like a 'degree' symbol) are added to the generated files.
 
 [![Compile Sketches](https://github.com/e-radionicacom/Inkplate-Arduino-library/actions/workflows/compile.yml/badge.svg?branch=master)](https://github.com/e-radionicacom/Inkplate-Arduino-library/actions/workflows/compile.yml)
 
