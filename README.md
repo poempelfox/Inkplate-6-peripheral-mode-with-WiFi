@@ -1,5 +1,12 @@
 # Soldered Inkplate Arduino library
 
+Note: This is a modified version of Inkplates Arduino library,
+where the only modification is that WiFi support has been added to
+the "Peripheral mode" sketch, so you can control the display via
+WiFi and not only via serial port.
+
+This is done in a very messy and quick-hack way, so there is sadly no chance to upstream this without putting in a lot of work.
+
 [![Compile Sketches](https://github.com/e-radionicacom/Inkplate-Arduino-library/actions/workflows/compile.yml/badge.svg?branch=master)](https://github.com/e-radionicacom/Inkplate-Arduino-library/actions/workflows/compile.yml)
 
 <p align="center">
